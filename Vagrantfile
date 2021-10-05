@@ -66,10 +66,7 @@ Vagrant.configure("2") do |config|
         # prepare vim
         config.vm.provision "file", :source => "ubuntu/vim/vimrc", :destination => ".vimrc"
         config.vm.provision "file", :source => "ubuntu/vim/coc-settings.json", :destination => ".vim/coc-settings.json"
-
-        # prepare nix
-        config.vm.provision "file", :source => "ubuntu/nix/nix.conf", :destination => "/etc/nix/nix.conf"
-        
+       
         # install nix
         node.vm.provision "install-nix", type: "shell", :path => "ubuntu/install-nix.sh", privileged: false
         
