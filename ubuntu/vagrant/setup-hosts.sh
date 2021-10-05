@@ -9,5 +9,5 @@ sed -e '/^.*ubuntu-focal.*/d' -i /etc/hosts
 
 # Update /etc/hosts about other hosts
 cat >> /etc/hosts <<EOF
-192.168.5.21  plutus-node-1
+192.168.5.11  alonzo-node-1
 EOF

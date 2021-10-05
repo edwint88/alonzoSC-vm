@@ -1,0 +1,23 @@
+# The Cardano node service (part of systemd)
+# file: /etc/systemd/system/cardano-node.service 
+
+[Unit]
+Description     = Cardano node service
+Wants           = network-online.target
+After           = network-online.target 
+
+[Service]
+User            = vagrant
+Type            = simple
+WorkingDirectory= /home/vagrant/cardano-my-node
+ExecStart       = /bin/bash -c '/home/vagrant/cardano-my-node/startRelayNode1.sh'
+KillSignal=SIGINT
+RestartKillSignal=SIGINT
+TimeoutStopSec=2
+LimitNOFILE=32768
+Restart=always
+RestartSec=5
+SyslogIdentifier=cardano-node
+
+[Install]
+WantedBy	= multi-user.target
