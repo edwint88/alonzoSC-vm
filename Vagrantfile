@@ -74,9 +74,7 @@ Vagrant.configure("2") do |config|
         #node.vm.provision "install-docker", type: "shell", :path => "ubuntu/install-docker.sh"
         
         # prepare plutus
-        node.vm.provision "prepare-plutus", type: "shell", :path => "ubuntu/prepare-plutus.sh", privileged: false do |s|
-          s.args = [VM_USER]
-        end
+        node.vm.provision "prepare-plutus", type: "shell", :path => "ubuntu/prepare-plutus.sh", privileged: false
 
         # prepare cardano-node :: cardano-cli 
         node.vm.provision "install-cardano-deps", type: "shell", :path => "ubuntu/cardano-node/cardano-deps.sh", privileged: false

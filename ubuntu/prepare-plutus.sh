@@ -1,10 +1,10 @@
-mkdir -p $HOME/$1/git
+mkdir -p $HOME/git
 # Prepare VIM
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +'PlugInstall --sync' +qa 2>&1
 
-cd $HOME/$1/git
+cd $HOME/git
 git clone https://github.com/input-output-hk/plutus
 git clone https://github.com/input-output-hk/plutus-starter.git
 git clone https://github.com/input-output-hk/plutus-pioneer-program.git
