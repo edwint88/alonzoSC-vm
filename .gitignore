@@ -1,0 +1,6 @@
+.idea
+ubuntu-focal*.log
+.vagrant
+temp
+plutus_files
+.history
