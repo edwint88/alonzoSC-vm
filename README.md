@@ -3,6 +3,7 @@
 ## Prerequisites
 
 1. Obtain & Install Vagrant from the [Official Source](https://www.vagrantup.com)
+    Install vagrant-disksize plugin -> `vagrant plugin install vagrant-disksize`
 2. Obtain & Install VirtualBox from the [Official Source](https://www.virtualbox.org)
 3. Reboot
 

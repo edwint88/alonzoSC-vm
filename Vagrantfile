@@ -19,6 +19,8 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  config.disksize.size = '80GB'
+
   config.vm.box = VAGRANT_BOX
   config.vm.box_check_update = false
 
